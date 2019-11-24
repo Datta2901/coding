@@ -6,7 +6,7 @@ typedef char countryName[6];
     int age ;
     float Bat_Avg ;
 } ;
-typedef struct Batman Batsman ;
+typedef struct Batsman Batsman ;
 struct Bowler
 {
     countryName Name; 
@@ -22,7 +22,7 @@ struct wicketkeeper
     int stumpings ;
 };
 typedef struct wicketkeeper keeper ;
-typedef enum {Batsman =-1,bowler,wicketkeeper}playerkind ;
+typedef enum {BATSMAN =-1,BOWLER,WICKETKEEPER}playerkind ;
 typedef struct 
 {
     playerkind kind ;
@@ -35,7 +35,8 @@ typedef struct
      }playertype;    
 }player;
 int main()
-{
+{   
+    playerkind Bowler,Batsman,Wicketkeeper ;
     player p1,p2,p3 ;
     int type ;
     printf("Enter the player type\n");
@@ -43,8 +44,8 @@ int main()
     scanf("%d",&type);
     switch((playerkind)type)
     {
-        case bowler :
-           p1.kind = bowler ;
+        case -1 :
+           p1.kind = -1 ;
         printf("enter the country of the bowler.name \n");
         scanf("%s",p1.playertype.bowler.Name);
         printf("Enter the age of the bowler");
@@ -52,8 +53,8 @@ int main()
         printf("Enter the Bowling avg of the bowler \n");
         scanf("%f",&p1.playertype.bowler.bow_avg);
          break ;
-         case Batsman :
-           p2.kind = Batsman ;
+         case 0 :
+           p2.kind = 0 ;
         printf("enter the country of the bowler.name \n");
         scanf("%S",p2.playertype.batsman.Name);
         printf("Enter the age of the bowler,Name");
@@ -61,8 +62,8 @@ int main()
         printf("Enter the batting avg of the batsman");
         scanf("%d",&p2.playertype.batsman.Bat_Avg);
         break ;
-        case wicketkeeper :
-         p3.kind =wicketkeeper ;
+        case 1:
+         p3.kind = 1 ;
          printf("enter the country of the bowler");
          scanf("%s",p3.playertype.keeper.name);
          printf("enter the age of the bowler");
