@@ -1,6 +1,6 @@
 # include<stdio.h>
 int main ()
-{
+{   printf("no of test cases and numbers") ;
     int t ;
     scanf("%d",&t);
    
