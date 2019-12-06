@@ -1,5 +1,14 @@
 #include <stdio.h>
 #include <math.h>
+int power(int x, unsigned int y) 
+{ 
+    if (y == 0) 
+        return 1; 
+    else if (y%2 == 0) 
+        return power(x, y/2)*power(x, y/2); 
+    else
+        return x*power(x, y/2)*power(x, y/2); 
+}
 int main(void)
 {
 int num1, num2;
@@ -19,7 +28,7 @@ case '/':
 res = (float)num1/(float)num2;
 break;
 case '^':
-res = pow(num1,num2);
+res = power(num1,num2);
 break;
 default:
 printf ("\n Invalid Operator");
