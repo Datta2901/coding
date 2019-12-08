@@ -1,13 +1,4 @@
 #include<stdio.h>
-int power(int x, unsigned int y) 
-{ 
-    if (y == 0) 
-        return 1; 
-    else if (y%2 == 0) 
-        return power(x, y/2)*power(x, y/2); 
-    else
-        return x*power(x, y/2)*power(x, y/2); 
-}
 int main()
 {
     printf("Enter the number");
@@ -25,42 +16,42 @@ for(i=0,a=0,c=0;n>0;i++,n=n/16)
         {
           s[i]= A ;
           printf("A");
-           printf("the required hexa decimal number is %c\n",s[i]);
+           printf("the required hexa decimal number is %C\n",s[i]);
         }
      else if(b==11)
          {
            s[i] =B ;
-         printf("the required hexa decimal number is %c\n",s[i]);
+         printf("the required hexa decimal number is %C\n",s[i]);
          }
      else if(b==12)
         { 
            s[i] =C ;
-         printf("the required hexa decimal number is %c\n",s[i]);
+         printf("the required hexa decimal number is %C\n",s[i]);
          }
      else if(b==13)
         {
            s[i]=D ;
-        printf("the required hexa decimal number is %c\n",s[i]);
+        printf("the required hexa decimal number is %C\n",s[i]);
        }
      else if(b==14)
        { 
            s[i]=E ;
-         printf("the required hexa decimal number is %c\n",s[i]);
+         printf("the required hexa decimal number is %C\n",s[i]);
         }
     else if(b==15)
         { 
             s[i]= F ;
-         printf("the required hexa decimal number is %c\n",s[i]);
+         printf("the required hexa decimal number is %C\n",s[i]);
         }
     }
    else
         {
 
             s[i] = b ;
-            printf("the required hexa decimal number is %d\n",s[i]);
+            printf("the required hexa decimal number is %d %d\n",s[i],i);
        }
     
 }
-printf("%s",s);
+printf("111 %s",s[10]);
 return 0 ;
 }
