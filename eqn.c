@@ -8,7 +8,7 @@ float distance(int u ,int t,int a)
 }
 int main()
 {
- printf("enter the velocity,time,accleration");
+ printf("enter the velocity,time,accleration s=ut+1/2at^2");
  float s;
  scanf("%d%d%d",&u,&t,&a);
  s = distance(u,t,a);
