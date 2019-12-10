@@ -12,11 +12,19 @@ int main()
         for(b=0;b<j;b++)
         scanf("%d",&A[a][b]);
     }
-     for(a=0;a<i;a++)
+    if(i == j)
     {
-        for(b=0;b<j;b++)
-    printf("%d",A[b][a]);
+        for(a=0;a<i;a++)
+        {
+            for(b=0;b<j;b++)
+        printf("%d",A[b][a]);
+        }
+        printf("is the required transpose matrice \n");
     }
-    printf("is the required transpose matrice \n");
+    else
+    {
+        printf("Invalid enter a square matrice");
+    }
+    
     return 0 ;
 }
