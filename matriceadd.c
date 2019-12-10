@@ -1,18 +1,19 @@
 #include<stdio.h>
 int main()
-{  
-    int i,j ;
-    int A[2][3] ,B[2][3],C[2][3];
+{  printf("Enter the order of the matrice");
+    int i,j,a,b ;
+    scanf("%d%d",&a,&b);
+    int A[a][b] ,B[a][b],C[a][b];
     printf("Enter the elements of [A]");
-  for(i=0;i<2;i++)
-  for(j=0;j<3;j++)
+  for(i=0;i<a;i++)
+  for(j=0;j<b;j++)
   scanf("%d",&A[i][j]);
   printf("Enter the elements of [B]");
- for(i=0;i<2;i++)
-  for(j=0;j<3;j++)
+ for(i=0;i<a;i++)
+  for(j=0;j<b;j++)
   scanf("%d",&B[i][j]);
-   for(i=0;i<2;i++)
-  for(j=0;j<3;j++)
+   for(i=0;i<a;i++)
+  for(j=0;j<b;j++)
   {
       C[i][j]=A[i][j]+B[i][j] ;
       printf("%d ",C[i][j]);
