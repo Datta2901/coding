@@ -1,23 +1,36 @@
 #include<stdio.h>
 int main()
 {
-  int num,length,i,j,ele ;
-  scanf("%d",&length) ;
-  int arr[length],sorted_arr[length] ;
-  for(i=0;i<length;i++)
-    scanf("%d",arr[i]) ;
-  sorted_arr[0] = arr[0] ;
-  num = 1 ;
-  for(i = 1;i<length;i++)
-  {
-     ele =arr[i] ;
-      
-
-  }  
-
-
-
-
-
+    printf("Enter the size of the aray");
+    int n,array[n],sortedarray[n],i,j,s,ele;
+    scanf("%d",&n);
+    printf("Enter the elements of the array");
+    for(i=0;i<n;i++)
+    {
+        scanf("%d",&array[i]);
+    } 
+    sortedarray[0]=array[0];
+    s=1;
+     for(i=1;i<n;i++)
+    {
+    ele =array[i] ;
+        for(j=s-1;j>=0;j--)
+        {
+            if(sortedarray[j]>ele)
+            sortedarray[j+1]=sortedarray[j];
+            else
+            {
+                break ;
+            }
+        }
+  sortedarray[j+1]=ele ;
+        s++ ;
+    }
+    printf("the required sorted array is");
+  for(i=0;i<n;i++)
+    {
+        printf("%d ",sortedarray[i]);
+    }
+    printf("\n");
     return 0 ;
-}
+}   
