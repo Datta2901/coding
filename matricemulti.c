@@ -18,16 +18,14 @@ int main()
      for(j=0;j<a;j++)
      scanf("%d",&B[i][j]);
    }
-   for(i=0;i<2*b;i++)
+   for(i=0;i<b;i++)
     {
-      for(j=0,s=0;j<2*a;j++)
+      for(j=0,s=0;j<a;j++)
       {
           s= A[i][j]*B[j][i]+s ;
-          C[i][j]=s ;
-          printf("%d ",C[i][j]);   
+          C[i][j]=s ;  
       }
-   
-     s=0 ; 
+      printf("%d ",C[i][j]);  
     }
     return 0 ;
 }

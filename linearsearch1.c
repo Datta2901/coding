@@ -23,8 +23,11 @@ int main()
             if(A[row][col] == key)
             {
                 printf("the key is found\n");
-            }   
+              break ;
+            }
             
         } 
-    }    
+    } 
+    if (row==rows &&col==cols) 
+    printf("the key is not found");  
 }

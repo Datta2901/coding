@@ -21,8 +21,8 @@ int factorial(int num)
 int sinesum(int num,float x)
 {
    int i, sign =1 ;
-   float sum, element ;
-   for (i=1;i<=num;i++)
+   float sum=0, element ;
+   for (i=1;i<=num;i++,sign=-1)
    {
        element = sign * power(x,2*i-1)/factorial(2*i-1);
    sum =sum+element ;
